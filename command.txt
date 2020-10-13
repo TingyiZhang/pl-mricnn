@@ -1,0 +1,6 @@
+mkdir in out && chmod 777 out                                \
+docker run --rm -v $(pwd)/in:/incoming -v $(pwd)/out:/outgoing      \
+           fnndsc/pl-mricnn mricnn.py                        \
+           --mode 1                                                    \
+           --epochs 10                                                 \
+           /incoming /outgoing
